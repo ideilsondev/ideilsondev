@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Terminal } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Hero() {
   return (
@@ -12,7 +13,8 @@ export function Hero() {
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[100px] opacity-30 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 w-full">
-        <div className="max-w-3xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="max-w-3xl order-2 lg:order-1">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -84,6 +86,34 @@ export function Hero() {
               </svg>
               Falar no WhatsApp
             </Link>
+          </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="order-1 lg:order-2 flex justify-center lg:justify-end"
+          >
+            <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full p-2 bg-gradient-to-tr from-orange-500/40 to-yellow-500/10 shadow-[0_0_40px_rgba(249,115,22,0.2)]">
+              <div className="w-full h-full rounded-full overflow-hidden border-2 border-orange-500/20 relative bg-zinc-900">
+                <Image
+                  src="/profile.jpg"
+                  alt="Ideilson - Software Engineer"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              
+              {/* Decorative elements */}
+              <div className="absolute top-1/4 -right-4 w-12 h-12 rounded-full bg-zinc-900 border border-white/10 flex items-center justify-center text-orange-400 shadow-xl animate-bounce" style={{ animationDuration: '3s' }}>
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <div className="absolute bottom-1/4 -left-4 w-14 h-14 rounded-full bg-zinc-900 border border-white/10 flex items-center justify-center text-yellow-400 shadow-xl animate-bounce" style={{ animationDuration: '4s', animationDelay: '1s' }}>
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
