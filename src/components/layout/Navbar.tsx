@@ -43,7 +43,7 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         <Link href="/" className="text-xl font-bold tracking-tight text-zinc-100 flex items-center gap-2">
-          <span className="w-8 h-8 rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center border border-indigo-500/30">
+          <span className="w-8 h-8 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center border border-orange-500/30">
             ID
           </span>
           <span className="hidden sm:block">Ideilson</span>

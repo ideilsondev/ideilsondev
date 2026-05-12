@@ -58,7 +58,7 @@ export function Experience() {
                   <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-zinc-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
                   <div className="relative z-10">
                     <h3 className="text-xl font-bold text-zinc-100 mb-1">
-                      {exp.role} · <span className="text-indigo-400">{exp.company}</span>
+                      {exp.role} · <span className="text-orange-400">{exp.company}</span>
                     </h3>
                     <p className="mt-4 text-zinc-400 leading-relaxed">
                       {exp.description}
@@ -67,7 +67,7 @@ export function Experience() {
                       {exp.tech.map((tech) => (
                         <li
                           key={tech}
-                          className="px-3 py-1 text-xs font-medium text-indigo-300 bg-indigo-500/10 border border-indigo-500/20 rounded-full"
+                          className="px-3 py-1 text-xs font-medium text-orange-300 bg-orange-500/10 border border-orange-500/20 rounded-full"
                         >
                           {tech}
                         </li>
