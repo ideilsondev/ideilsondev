@@ -98,7 +98,7 @@ export function Hero() {
             <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full p-2 bg-gradient-to-tr from-orange-500/40 to-yellow-500/10 shadow-[0_0_40px_rgba(249,115,22,0.2)]">
               <div className="w-full h-full rounded-full overflow-hidden border-2 border-orange-500/20 relative bg-zinc-900">
                 <Image
-                  src="/profile.jpg"
+                  src="/profile.jpeg"
                   alt="Ideilson - Software Engineer"
                   fill
                   className="object-cover"
