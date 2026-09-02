@@ -1,28 +1,8 @@
-import { Navbar } from "@/components/layout/Navbar";
-import { Hero } from "@/components/sections/Hero";
-import { Experience } from "@/components/sections/Experience";
-import { Projects } from "@/components/sections/Projects";
 import { Contact } from "@/components/sections/Contact";
-
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col bg-zinc-950">
-      <Navbar />
-      <Hero />
-      <Experience />
-      <Projects />
-      <Contact />
-      
-      <footer className="py-8 border-t border-white/5 mt-auto">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-zinc-500">
-            © {new Date().getFullYear()} Ideilson. All rights reserved.
-          </p>
-          <div className="flex gap-4 text-sm text-zinc-500">
-            <span>Built with Next.js & Tailwind CSS v4</span>
-          </div>
-        </div>
-      </footer>
-    </main>
-  );
-}
+import { Experience } from "@/components/sections/Experience";
+import { Hero } from "@/components/sections/Hero";
+import { Projects } from "@/components/sections/Projects";
+import { Navbar } from "@/components/layout/Navbar";
+import { siteUrl } from "@/lib/site";
+const personSchema={"@context":"https://schema.org","@type":"Person",name:"Ideilson",url:siteUrl.toString(),jobTitle:"Senior Software Engineer",sameAs:["https://github.com/ideilsondev","https://www.linkedin.com/in/ideilson/"],knowsAbout:["Software architecture","Distributed systems","Rust","Go","Node.js","Data integration"]};
+export default function Home(){return <main><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(personSchema)}}/><Navbar/><Hero/><Experience/><Projects/><Contact/><footer className="border-t border-white/10"><div className="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-8 text-sm text-[var(--faint)] md:flex-row md:justify-between md:px-12"><p>© {new Date().getFullYear()} Ideilson. Todos os direitos reservados.</p><a className="hover:text-white" href="https://github.com/ideilsondev" target="_blank" rel="noreferrer">github.com/ideilsondev</a></div></footer></main>}
